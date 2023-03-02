@@ -23,9 +23,15 @@ function onClick(element) {
       mySidebar.style.display = "none";
   }
 
-const Pay1 = ()=> {
-  const exampleBtn = document.getElementById('btn-submit');
-  exampleBtn.addEventListener('click', () => {
-    window.open(`https://pay.h4b.dev/pl/V2rcoq/?amount=10&stay=0&callbackurl=${encodeURIComponent('http://127.0.0.1:5555/index.html')}`, '_blank');
-  });
+  const Pay1 = ()=> {
+    window.open(`https://pay.h4b.dev/pl/Yq9SdZ/?stay=0&callbackurl=${encodeURIComponent('https://n1coapp.github.io/ProfessionalServiceDemo/')}`, '_blank'); 
 }
+
+  const Pay2 = ()=> {  
+    window.open(`https://pay.h4b.dev/pl/dYXFjP/?stay=0&callbackurl=${encodeURIComponent('https://n1coapp.github.io/ProfessionalServiceDemo/')}`, '_self');
+  }
+
+    const Pay3 = ()=> {
+    window.open(`https://pay.h4b.dev/pl/Lb7s53/?amount=0&callbackurl=${encodeURIComponent('https://n1coapp.github.io/ProfessionalServiceDemo/')}`, '_parent');
+  }
+
