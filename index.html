@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>n1co demo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="#home" class="w3-bar-item w3-button w3-wide">DEMO</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+         <a href="#pricing" class="w3-bar-item w3-button"
+            ><i class="fa fa-usd"></i> Precio</a
+          >
+          <a href="#contact" class="w3-bar-item w3-button"
+            ><i class="fa fa-envelope"></i> contacto</a
+          >
+        </div>
+       
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <nav
+      class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+      style="display: none"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16"
+        >Close ×</a
+      >
+      <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"
+        >PRECIO</a
+      >
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"
+        >CONTACTO</a
+      >
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+      <div class="w3-display-left w3-text-white" style="padding: 48px">
+        <span class="w3-jumbo w3-hide-small">   Empieza a cobrar por tus servicios profesionales con</span
+        ><br />
+        <img src="./img/Color=Blanco.svg" alt="n1co">
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium"
+          >Usando n1co link de pago</span
+        ><br />
+      </div>
+      <div
+        class="w3-display-bottomleft w3-text-grey w3-large"
+        style="padding: 24px 48px"
+      >
+        <a href="https://www.facebook.com/n1co.latam"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/n1co.latam/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/company/n1co/mycompany/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
+    </header>
+
+    <!-- Modal for full size images on click-->
+    <div
+      id="modal01"
+      class="w3-modal w3-black"
+      onclick="this.style.display='none'"
+    >
+      <span
+        class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright"
+        title="Close Modal Image"
+        >×</span
+      >
+      <div
+        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+      >
+        <img src="/" alt="ima" id="img01"  class="w3-image" />
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+   
+
+    <!-- Pricing Section -->
+    <div
+      class="w3-container w3-center w3-dark-grey"
+      style="padding: 128px 16px"
+      id="pricing"
+    >
+      <h3>Precios fijos de servicios</h3>
+      <p class="w3-large">Elije el plan de servicios que necesitas</p>
+      <div class="w3-row-padding" style="margin-top: 64px">
+        <div class="w3-third w3-section">
+          <ul class="w3-ul w3-white w3-hover-shadow">
+            <li class="w3-black w3-xlarge w3-padding-32">Plan 1</li>
+            <li class="w3-padding-16">
+              <h2 class="w3-wide">$ 10</h2>
+              <span class="w3-opacity">pago único valor fijo</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button id="btn-submit" onclick="Pay1()" class="w3-button w3-black w3-padding-large">
+                Pagar
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="w3-third">
+          <ul class="w3-ul w3-white w3-hover-shadow">
+            <li class="w3-red w3-xlarge w3-padding-48">Plan 2</li>
+            <li class="w3-padding-16">
+              <h2 class="w3-wide">$ 25</h2>
+              <span class="w3-opacity">pago mensual valor fijo</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-black w3-padding-large">
+                Pagar
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="w3-third w3-section">
+          <ul class="w3-ul w3-white w3-hover-shadow">
+            <li class="w3-black w3-xlarge w3-padding-32">Plan 3</li>
+            <li class="w3-padding-16">
+              <h2 class="w3-wide">Elige el pago</h2>
+              <span class="w3-opacity">pago variable</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-black w3-padding-large">
+                Pagar
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div
+      class="w3-container w3-light-grey"
+      style="padding: 128px 16px"
+      id="contact"
+    >
+      <h3 class="w3-center">CONTACTO</h3>
+      <p class="w3-center w3-large">Visita nuestra web para mas detalle</p>
+      <div style="margin-top: 48px">
+       
+        <p>
+          <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Website:
+         <a href="https://n1co.com/">n1co.com </a> 
+        </p>        
+        <br />      
+     
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+      <a href="#home" class="w3-button w3-light-grey"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>ir arriba</a
+      >
+      <div class="w3-xlarge w3-section">
+        <a href="https://www.facebook.com/n1co.latam"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/n1co.latam/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/company/n1co/mycompany/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
+      <p>
+        Powered by
+        <a
+          href="https://n1co.com/"
+          title="n1co.com"
+          target="_blank"
+          class="w3-hover-text-green"
+          >n1co.com</a
+        >
+      </p>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
